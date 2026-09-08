@@ -1,0 +1,573 @@
+{
+    "info": {
+        "name": "MediCare Microservices API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Patient Service",
+            "item": [
+                {
+                    "name": "Create Patient",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"fullName\": \"Nguy\\u1ec5n V\\u0103n A\",\n    \"dateOfBirth\": \"1990-05-15\",\n    \"gender\": \"MALE\",\n    \"phone\": \"0901234567\",\n    \"address\": \"123 Tr\\u1ea7n H\\u01b0ng \\u0110\\u1ea1o, H\\u00e0 N\\u1ed9i\",\n    \"insuranceId\": \"BH123456789\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8081/api/patients",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8081",
+                            "path": [
+                                "api",
+                                "patients"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Patients",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8081/api/patients",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8081",
+                            "path": [
+                                "api",
+                                "patients"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Patient By ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8081/api/patients/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8081",
+                            "path": [
+                                "api",
+                                "patients",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Patient",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"fullName\": \"Nguy\\u1ec5n V\\u0103n A\",\n    \"dateOfBirth\": \"1990-05-15\",\n    \"gender\": \"MALE\",\n    \"phone\": \"0901234567\",\n    \"address\": \"123 Tr\\u1ea7n H\\u01b0ng \\u0110\\u1ea1o, H\\u00e0 N\\u1ed9i\",\n    \"insuranceId\": \"BH123456789\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8081/api/patients/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8081",
+                            "path": [
+                                "api",
+                                "patients",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Patient",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8081/api/patients/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8081",
+                            "path": [
+                                "api",
+                                "patients",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Doctor Service",
+            "item": [
+                {
+                    "name": "Create Doctor",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"fullName\": \"Tr\\u1ea7n Th\\u1ecb B\",\n    \"specialization\": \"Cardiology\",\n    \"experienceYears\": 10,\n    \"phone\": \"0987654321\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8082/api/doctors",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8082",
+                            "path": [
+                                "api",
+                                "doctors"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Doctors",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8082/api/doctors",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8082",
+                            "path": [
+                                "api",
+                                "doctors"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Doctor By ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8082/api/doctors/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8082",
+                            "path": [
+                                "api",
+                                "doctors",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Doctor",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"fullName\": \"Tr\\u1ea7n Th\\u1ecb B\",\n    \"specialization\": \"Cardiology\",\n    \"experienceYears\": 10,\n    \"phone\": \"0987654321\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8082/api/doctors/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8082",
+                            "path": [
+                                "api",
+                                "doctors",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Doctor",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8082/api/doctors/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8082",
+                            "path": [
+                                "api",
+                                "doctors",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Appointment Service",
+            "item": [
+                {
+                    "name": "Create Appointment",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"patientId\": 1,\n    \"doctorId\": 1,\n    \"appointmentDate\": \"2026-10-15T09:30:00\",\n    \"status\": \"SCHEDULED\",\n    \"reason\": \"Routine Checkup\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8083/api/appointments",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8083",
+                            "path": [
+                                "api",
+                                "appointments"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Appointments",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8083/api/appointments",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8083",
+                            "path": [
+                                "api",
+                                "appointments"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Appointment By ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8083/api/appointments/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8083",
+                            "path": [
+                                "api",
+                                "appointments",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Appointment",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"patientId\": 1,\n    \"doctorId\": 1,\n    \"appointmentDate\": \"2026-10-15T09:30:00\",\n    \"status\": \"SCHEDULED\",\n    \"reason\": \"Routine Checkup\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8083/api/appointments/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8083",
+                            "path": [
+                                "api",
+                                "appointments",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Appointment",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8083/api/appointments/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8083",
+                            "path": [
+                                "api",
+                                "appointments",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "MedicalRecord Service",
+            "item": [
+                {
+                    "name": "Create MedicalRecord",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"patientId\": 1,\n    \"doctorId\": 1,\n    \"diagnosis\": \"Hypertension\",\n    \"treatment\": \"Take medicine X\",\n    \"notes\": \"Follow up in 1 month\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8084/api/medicalrecords",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8084",
+                            "path": [
+                                "api",
+                                "medicalrecords"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All MedicalRecords",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8084/api/medicalrecords",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8084",
+                            "path": [
+                                "api",
+                                "medicalrecords"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get MedicalRecord By ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8084/api/medicalrecords/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8084",
+                            "path": [
+                                "api",
+                                "medicalrecords",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update MedicalRecord",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"patientId\": 1,\n    \"doctorId\": 1,\n    \"diagnosis\": \"Hypertension\",\n    \"treatment\": \"Take medicine X\",\n    \"notes\": \"Follow up in 1 month\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8084/api/medicalrecords/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8084",
+                            "path": [
+                                "api",
+                                "medicalrecords",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete MedicalRecord",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8084/api/medicalrecords/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8084",
+                            "path": [
+                                "api",
+                                "medicalrecords",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Pharmacy Service",
+            "item": [
+                {
+                    "name": "Create Pharmacy",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Paracetamol 500\",\n    \"manufacturer\": \"Pharma JSC\",\n    \"price\": 5.5,\n    \"quantity\": 100\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8085/api/medications",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8085",
+                            "path": [
+                                "api",
+                                "medications"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Pharmacys",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8085/api/medications",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8085",
+                            "path": [
+                                "api",
+                                "medications"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Pharmacy By ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8085/api/medications/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8085",
+                            "path": [
+                                "api",
+                                "medications",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Pharmacy",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Paracetamol 500\",\n    \"manufacturer\": \"Pharma JSC\",\n    \"price\": 5.5,\n    \"quantity\": 100\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8085/api/medications/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8085",
+                            "path": [
+                                "api",
+                                "medications",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Pharmacy",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8085/api/medications/1",
+                            "host": [
+                                "http://localhost"
+                            ],
+                            "port": "8085",
+                            "path": [
+                                "api",
+                                "medications",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
